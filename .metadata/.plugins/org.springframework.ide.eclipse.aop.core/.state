@@ -35,4 +35,5 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="asp_sample"/>
+<aop-project name="tcpip1"/>
 </aop-reference-model>
