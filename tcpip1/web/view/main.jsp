@@ -11,6 +11,9 @@
 <script>
 $(document).ready(function(){
 	
+	
+	
+	
    $('#iot').click(function(){
 	   var ip = $('#ip').val();
 	   $.ajax({

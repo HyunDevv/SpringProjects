@@ -54,27 +54,27 @@ public class Client {
       new Thread(sender).start();
 	   }
    
-   public void sendMsg() {
-      Scanner sc = new Scanner(System.in);
+   public void sendMsg(String ms) {
+      //Scanner sc = new Scanner(System.in);
       while(true) {
          // 皋技瘤 涝仿
-         System.out.println("Input msg");
-         String ms = sc.nextLine();
+         //System.out.println("Input msg");
+         //String ms = sc.nextLine();
          Msg msg = null;
          ArrayList<String> ips = new ArrayList<>();
          if(ms.equals("w")) {
-            // 庇加富
-            while(true) {
-               System.out.println("Input other Ip");
-               String other = sc.nextLine();
-               if(other.equals("end")) {
-                  break;
-               }
-               ips.add(other);
-            }
-            System.out.println("Input msg");
-            String newms = sc.nextLine();
-            msg = new Msg(ips, id, newms);
+//            // 庇加富
+//            while(true) {
+//               System.out.println("Input other Ip");
+//               String other = sc.nextLine();
+//               if(other.equals("end")) {
+//                  break;
+//               }
+//               ips.add(other);
+//            }
+//            System.out.println("Input msg");
+//            String newms = sc.nextLine();
+//            msg = new Msg(ips, id, newms);
          }else {
             msg = new Msg(id, ms);
          }
@@ -88,7 +88,7 @@ public class Client {
          }
       }
       
-      sc.close();
+      //sc.close();
       if(socket != null) {
          try {
             socket.close();

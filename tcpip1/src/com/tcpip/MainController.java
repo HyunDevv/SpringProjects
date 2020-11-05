@@ -10,6 +10,7 @@ import java.net.URL;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -115,4 +116,20 @@ public class MainController {
       
       
    }
+   
+   
+   
+   @RequestMapping("/car.mc")
+	public void car(HttpServletRequest request) {
+		String ip = request.getParameter("ip");
+		String sensor = request.getParameter("sensor");
+	    String msg = ip+" "+sensor;
+	    
+	    client.sendTarget("/192.168.0.64",msg);
+	    
+	    System.out.println(msg);
+		
+	}
+   
+   
 }
